@@ -1,3 +1,9 @@
+.site-header {
+  color: var(--ink);
+  background: rgba(242, 241, 237, .95);
+  border-bottom: 1px solid var(--line);
+}
+
 .legal-page {
   max-width: 720px;
   margin: 0 auto;

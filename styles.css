@@ -15,6 +15,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--paper); }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: Manrope, Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+section[id] { scroll-margin-top: 5rem; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font: inherit; }
@@ -33,6 +34,8 @@ button { font: inherit; }
 .primary-nav a { text-decoration: none; }
 .primary-nav a:hover { text-decoration: underline; text-underline-offset: .3rem; }
 .nav-github { padding: .5rem .7rem; border: 1px solid currentColor; }
+.nav-contribute { padding: .5rem .7rem; border: 1px solid var(--signal); background: var(--signal); color: var(--ink); }
+.nav-contribute:hover { text-decoration: none !important; background: transparent; color: inherit; }
 .menu-toggle { display: none; border: 1px solid currentColor; background: transparent; color: inherit; font-family: "IBM Plex Mono", monospace; font-size: .68rem; padding: .45rem .65rem; text-transform: uppercase; }
 
 .hero { position: relative; min-height: max(680px, 100svh); overflow: clip; color: #fff; background: var(--night); }
@@ -40,7 +43,7 @@ button { font: inherit; }
 .hero-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, .16); }
 .hero-content { position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: end; min-height: 100svh; width: min(425px, 34vw); margin-left: var(--gutter); padding: 8rem 0 5.5rem; }
 .hero-copy-block { padding: 1.35rem; border-left: 2px solid var(--signal); background: #080808; }
-.eyebrow, .section-label { margin: 0; font-family: "IBM Plex Mono", monospace; font-size: .67rem; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
+.eyebrow, .section-label { margin: 0; font-family: "IBM Plex Mono", monospace; font-size: .75rem; letter-spacing: .08em; line-height: 1.35; text-transform: uppercase; }
 .hero h1, h2, h3, p { margin-top: 0; }
 .hero h1 { max-width: 700px; margin: .95rem 0 1.15rem; font-size: clamp(2.35rem, 3.6vw, 4.3rem); font-weight: 500; letter-spacing: -.082em; line-height: .92; }
 em { font-style: normal; color: var(--signal); }
@@ -50,6 +53,8 @@ em { font-style: normal; color: var(--signal); }
 .button-light { border-color: var(--signal); background: var(--signal); color: var(--ink); }
 .button-light:hover { background: transparent; color: var(--signal); }
 .button-quiet:hover { background: #fff; color: var(--ink); }
+.button-dark { border-color: var(--ink); background: var(--ink); color: #fff; }
+.button-dark:hover { background: transparent; color: var(--ink); }
 .media-note, .scroll-cue { position: absolute; bottom: 1.4rem; z-index: 4; font-family: "IBM Plex Mono", monospace; font-size: .63rem; letter-spacing: .03em; text-transform: uppercase; }
 .media-note { left: var(--gutter); }
 .scroll-cue { right: var(--gutter); color: inherit; text-decoration: none; }
@@ -145,6 +150,7 @@ h2 span { color: var(--ink-muted); }
 .funding-title-accent { display: block; color: #176f46; }
 .funding-copy .body-large { max-width: 700px; }
 .funding-copy .caution { max-width: 580px; }
+.funding-actions { margin-top: 2rem; }
 
 .contribute { padding: clamp(5rem, 10vw, 10rem) var(--gutter); color: #fff; background: var(--night); }
 .contribute-inner { display: grid; grid-template-columns: 1.15fr .65fr; gap: clamp(2rem, 8vw, 10rem); width: 100%; max-width: var(--max); margin: 0 auto; }
@@ -175,6 +181,7 @@ h2 span { color: var(--ink-muted); }
   .primary-nav { position: absolute; top: 100%; left: 0; display: none; width: 100%; padding: 1rem var(--gutter) 1.25rem; background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); }
   .primary-nav.is-open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nav-github { width: max-content; }
+  .nav-contribute { width: max-content; }
   .problem-grid, .section-heading, .guide-intro, .progress-heading, .funding, .contribute-inner { grid-template-columns: 1fr; }
   .problem-grid, .progress-heading { gap: 1.75rem; }
   .guide-intro > p { max-width: 540px; }
